@@ -1,8 +1,12 @@
+// Dependences
 const express = require("express")
 const router = express.Router()
 const axios = require("axios")
 const pdfkit = require("pdfkit")
 const fs = require("fs")
+
+// Externals
+const getCities = require("../api/get-cities")
 const randomNums = require("../utils/random-nums")
 const verifyState = require("../utils/verifyState")
 
@@ -19,9 +23,7 @@ router.get("/cidades/:letra", async (req, res) => {
       error: "[SERVER]: Pass the letter as a single character",
     })
 
-  const { data } = await axios
-    .get("http://servicodados.ibge.gov.br/api/v1/localidades/distritos")
-    .catch((err) => err.response)
+  const data = getCities()
 
   const citys = data.filter((city) =>
     city.nome.toLowerCase().startsWith(letter)
