@@ -1,0 +1,22 @@
+{
+  "name": "ex1-ifce",
+  "version": "1.0.0",
+  "description": "exercise 1 ifce discipline",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielduete/nodejs-studies.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "gabrielduete",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrielduete/nodejs-studies/issues"
+  },
+  "homepage": "https://github.com/gabrielduete/nodejs-studies#readme"
+}
